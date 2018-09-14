@@ -229,6 +229,127 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/14/Vue数据绑定/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jia Xiaowei">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jiaxiaowei">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/14/Vue数据绑定/" itemprop="url">学习vue</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-14T09:58:09+08:00">
+                2018-09-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Hello,大家好,这里是vue学习的基础教程，方便大家理解vue的使用。</p>
+<h2 id="vue中的数据"><a href="#vue中的数据" class="headerlink" title="vue中的数据"></a>vue中的数据</h2><h3 id="数据的绑定"><a href="#数据的绑定" class="headerlink" title="数据的绑定"></a>数据的绑定</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"en"</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;meta charset=<span class="string">"utf-8"</span>&gt;</span><br><span class="line">	&lt;title&gt;vue小白学习&lt;/title&gt;</span><br><span class="line">	&lt;script src=<span class="string">"./vue.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;div id=<span class="string">"root"</span>&gt;</span><br><span class="line">		&lt;h2&gt;&#123;&#123;msg&#125;&#125;&lt;/h2&gt;</span><br><span class="line">		&lt;h2 v-text=<span class="string">'msg1'</span>&gt;&lt;/h2&gt;</span><br><span class="line">		&lt;h2 v-html=<span class="string">'msg2'</span>&gt;&lt;/h2&gt;</span><br><span class="line">		&lt;h2 id=<span class="string">"root1"</span> v-html=<span class="string">'msg2'</span>&gt;&lt;/h2&gt;</span><br><span class="line"></span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">	&lt;script&gt;</span><br><span class="line">		new Vue(&#123;</span><br><span class="line">			el:<span class="string">'#root'</span>,</span><br><span class="line">			data:&#123;</span><br><span class="line">				msg:<span class="string">'&#123;&#123;&#125;&#125;代表插值表达式,使用它可以使页面中的某个元素使用Vue实例中data中的数据'</span>,</span><br><span class="line">				msg1:<span class="string">'v-text有同样的作用'</span>,</span><br><span class="line">				msg2:<span class="string">'也可以使用 v-html来代替'</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;);</span><br><span class="line">		var dom=document.getElementById(<span class="string">"root1"</span>)</span><br><span class="line">		dom.innerHTML=<span class="string">"不用像原生javascript直接操作dom了"</span></span><br><span class="line">	&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/28/CSS/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -471,253 +592,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/26/基于vue-cli构建的项目模板解析/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jia Xiaowei">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="jiaxiaowei">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/26/基于vue-cli构建的项目模板解析/" itemprop="url">vue学习的基础教程2</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-26T20:31:20+08:00">
-                2018-08-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>在学习vue中，学习其中的组件思想是进行下一步开发的必要工作，如果对这方面不太理解的话就很容易被搞晕掉。接下来我就带大家来学习一下vue脚手架工具中这些文件。</p>
-<p>当我们创建了一个vue-cli项目的时候，目录是这样：</p>
-<p><img src="/2018/08/26/基于vue-cli构建的项目模板解析/context.png" alt="avatar"></p>
-<p>其中绿框的文件是这个vue项目中非常重要的文件</p>
-<p>其中的index.html文件是是整个项目的默认的首页模板文件<br>它的样子是这样：</p>
-<p><img src="/2018/08/26/基于vue-cli构建的项目模板解析/基于vue-cli构建的项目模板解析g/index.png" alt="avatar"><br>我们可以看到这里面有一个id为app的div元素。</p>
-<p>main.js是这个项目的入口文件，它通常长成这样：</p>
-<p><img src="/2018/08/26/基于vue-cli构建的项目模板解析/main.png" alt="avatar"><br>从上面我们知道，main.js里面的这个vue根实例挂载在index.html的div这个挂载点上。所以index.html里面的内容其实就是main.js里面所要表现的内容。<br>在这个main.js文件中我们要理解export和import是什么意思，这两个功能其实是ES6模块新加的两个功能。<br>export用于对外输出本模块（一个文件可以理解为一个模块）变量的接口，<br>mport用于在一个模块中加载另一个含有export接口的模块。<br>接着我们看这个vue实例，它里面有一个components，说明这里面有一个局部组件引入到这个vue实例当中了。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/26/vue中显示数据的显示/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jia Xiaowei">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="jiaxiaowei">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/26/vue中显示数据的显示/" itemprop="url">vue学习的基础教程1</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-26T19:53:13+08:00">
-                2018-08-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Hello-大家好-这里是vue学习的基础教程，方便大家理解vue的使用。"><a href="#Hello-大家好-这里是vue学习的基础教程，方便大家理解vue的使用。" class="headerlink" title="Hello,大家好,这里是vue学习的基础教程，方便大家理解vue的使用。"></a>Hello,大家好,这里是vue学习的基础教程，方便大家理解vue的使用。</h3><p>关于vue中数据的使用，看下面的代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">	&lt;title&gt;vue小白学习&lt;/title&gt;</span><br><span class="line">	&lt;script src=&quot;./vue.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;div id=&quot;root&quot;&gt;</span><br><span class="line">		&lt;h2&gt;&#123;&#123;msg&#125;&#125;&lt;/h2&gt;</span><br><span class="line">		&lt;h2 v-text=&apos;msg1&apos;&gt;&lt;/h2&gt;</span><br><span class="line">		&lt;h2 v-html=&apos;msg2&apos;&gt;&lt;/h2&gt;</span><br><span class="line">		&lt;h2 id=&quot;root1&quot; v-html=&apos;msg2&apos;&gt;&lt;/h2&gt;</span><br><span class="line"></span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">	&lt;script&gt;</span><br><span class="line">		new Vue(&#123;</span><br><span class="line">			el:&apos;#root&apos;,</span><br><span class="line">			data:&#123;</span><br><span class="line">				msg:&apos;&#123;&#123;&#125;&#125;代表插值表达式,使用它可以使页面中的某个元素使用Vue实例中data中的数据&apos;,</span><br><span class="line">				msg1:&apos;v-text有同样的作用&apos;,</span><br><span class="line">				msg2:&apos;也可以使用 v-html来代替&apos;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;);</span><br><span class="line">		var dom=document.getElementById(&quot;root1&quot;)</span><br><span class="line">		dom.innerHTML=&quot;不用像原生javascript直接操作dom了&quot;</span><br><span class="line">	&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/26/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -879,7 +753,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
