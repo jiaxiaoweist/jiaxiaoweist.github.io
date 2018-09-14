@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="Hello,大家好,这里是vue学习的基础教程，方便大家理解vue的使用。 vue中的数据数据的绑定123456789101112131415161718192021222324252627&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html lang=&quot;en&quot;&amp;gt;&amp;lt;head&amp;gt;	&amp;lt;meta charset=&quot;utf-8&quot;&amp;gt;	&amp;lt;title&amp;gt;vue小白学习">
+<meta name="description" content="Hello,大家好,这里是vue学习的基础教程，方便大家理解vue的使用。 vue组件Vue组件之间传值在vue中父组件向子组件传值是通过属性的方式传递的。子组件和父组件之间的通信，使用发布订阅模式来做这件事情子组件发布事件：this.$emit（‘自定义的事件’，传递一个值）父组件监听事件：@自定义事件=“自定义方法和传递过来的值”">
 <meta property="og:type" content="article">
-<meta property="og:title" content="学习vue">
+<meta property="og:title" content="学习Vue-2">
 <meta property="og:url" content="http://yoursite.com/2018/09/14/Vue数据绑定/index.html">
 <meta property="og:site_name" content="jiaxiaowei">
-<meta property="og:description" content="Hello,大家好,这里是vue学习的基础教程，方便大家理解vue的使用。 vue中的数据数据的绑定123456789101112131415161718192021222324252627&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html lang=&quot;en&quot;&amp;gt;&amp;lt;head&amp;gt;	&amp;lt;meta charset=&quot;utf-8&quot;&amp;gt;	&amp;lt;title&amp;gt;vue小白学习">
+<meta property="og:description" content="Hello,大家好,这里是vue学习的基础教程，方便大家理解vue的使用。 vue组件Vue组件之间传值在vue中父组件向子组件传值是通过属性的方式传递的。子组件和父组件之间的通信，使用发布订阅模式来做这件事情子组件发布事件：this.$emit（‘自定义的事件’，传递一个值）父组件监听事件：@自定义事件=“自定义方法和传递过来的值”">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-14T02:02:16.182Z">
+<meta property="og:updated_time" content="2018-09-14T02:09:01.620Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="学习vue">
-<meta name="twitter:description" content="Hello,大家好,这里是vue学习的基础教程，方便大家理解vue的使用。 vue中的数据数据的绑定123456789101112131415161718192021222324252627&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html lang=&quot;en&quot;&amp;gt;&amp;lt;head&amp;gt;	&amp;lt;meta charset=&quot;utf-8&quot;&amp;gt;	&amp;lt;title&amp;gt;vue小白学习">
+<meta name="twitter:title" content="学习Vue-2">
+<meta name="twitter:description" content="Hello,大家好,这里是vue学习的基础教程，方便大家理解vue的使用。 vue组件Vue组件之间传值在vue中父组件向子组件传值是通过属性的方式传递的。子组件和父组件之间的通信，使用发布订阅模式来做这件事情子组件发布事件：this.$emit（‘自定义的事件’，传递一个值）父组件监听事件：@自定义事件=“自定义方法和传递过来的值”">
 
 
 
@@ -125,7 +125,7 @@
 
 
 
-  <title>学习vue | jiaxiaowei</title>
+  <title>学习Vue-2 | jiaxiaowei</title>
   
 
 
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">学习vue</h1>
+          <h1 class="post-title" itemprop="name headline">学习Vue-2</h1>
         
 
         <div class="post-meta">
@@ -300,7 +300,7 @@
 
       
         <p>Hello,大家好,这里是vue学习的基础教程，方便大家理解vue的使用。</p>
-<h2 id="vue中的数据"><a href="#vue中的数据" class="headerlink" title="vue中的数据"></a>vue中的数据</h2><h3 id="数据的绑定"><a href="#数据的绑定" class="headerlink" title="数据的绑定"></a>数据的绑定</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"en"</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;meta charset=<span class="string">"utf-8"</span>&gt;</span><br><span class="line">	&lt;title&gt;vue小白学习&lt;/title&gt;</span><br><span class="line">	&lt;script src=<span class="string">"./vue.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;div id=<span class="string">"root"</span>&gt;</span><br><span class="line">		&lt;h2&gt;&#123;&#123;msg&#125;&#125;&lt;/h2&gt;</span><br><span class="line">		&lt;h2 v-text=<span class="string">'msg1'</span>&gt;&lt;/h2&gt;</span><br><span class="line">		&lt;h2 v-html=<span class="string">'msg2'</span>&gt;&lt;/h2&gt;</span><br><span class="line">		&lt;h2 id=<span class="string">"root1"</span> v-html=<span class="string">'msg2'</span>&gt;&lt;/h2&gt;</span><br><span class="line"></span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">	&lt;script&gt;</span><br><span class="line">		new Vue(&#123;</span><br><span class="line">			el:<span class="string">'#root'</span>,</span><br><span class="line">			data:&#123;</span><br><span class="line">				msg:<span class="string">'&#123;&#123;&#125;&#125;代表插值表达式,使用它可以使页面中的某个元素使用Vue实例中data中的数据'</span>,</span><br><span class="line">				msg1:<span class="string">'v-text有同样的作用'</span>,</span><br><span class="line">				msg2:<span class="string">'也可以使用 v-html来代替'</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;);</span><br><span class="line">		var dom=document.getElementById(<span class="string">"root1"</span>)</span><br><span class="line">		dom.innerHTML=<span class="string">"不用像原生javascript直接操作dom了"</span></span><br><span class="line">	&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="vue组件"><a href="#vue组件" class="headerlink" title="vue组件"></a>vue组件</h2><h3 id="Vue组件之间传值"><a href="#Vue组件之间传值" class="headerlink" title="Vue组件之间传值"></a>Vue组件之间传值</h3><p>在vue中父组件向子组件传值是通过属性的方式传递的。<br>子组件和父组件之间的通信，使用发布订阅模式来做这件事情<br>子组件发布事件：this.$emit（‘自定义的事件’，传递一个值）<br>父组件监听事件：@自定义事件=“自定义方法和传递过来的值”</p>
 
       
     </div>
@@ -325,8 +325,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/28/CSS/" rel="next" title="">
-                <i class="fa fa-chevron-left"></i> 
+              <a href="/2018/08/26/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
               </a>
             
           </div>
@@ -334,6 +334,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/09/14/Vue组件之间传值/" rel="prev" title="学习vue">
+                学习vue <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -410,7 +414,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -447,7 +451,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#vue中的数据"><span class="nav-number">1.</span> <span class="nav-text">vue中的数据</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据的绑定"><span class="nav-number">1.1.</span> <span class="nav-text">数据的绑定</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#vue组件"><span class="nav-number">1.</span> <span class="nav-text">vue组件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue组件之间传值"><span class="nav-number">1.1.</span> <span class="nav-text">Vue组件之间传值</span></a></li></ol></li></ol></div>
             
 
           </div>
