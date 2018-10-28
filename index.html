@@ -229,7 +229,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/14/Vue组件之间传值/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/14/JavaScript/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jia Xiaowei">
@@ -248,7 +248,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/14/Vue组件之间传值/" itemprop="url">学习vue</a></h1>
+                <a class="post-title-link" href="/2018/09/14/JavaScript/" itemprop="url">JavaScript</a></h1>
         
 
         <div class="post-meta">
@@ -260,7 +260,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-14T10:06:22+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-14T10:19:51+08:00">
                 2018-09-14
               </time>
             
@@ -300,8 +300,15 @@
       
         
           
-            <p>Hello,大家好,这里是vue学习的基础教程，方便大家理解vue的使用。</p>
-<h2 id="vue中的数据"><a href="#vue中的数据" class="headerlink" title="vue中的数据"></a>vue中的数据</h2><h3 id="数据的绑定"><a href="#数据的绑定" class="headerlink" title="数据的绑定"></a>数据的绑定</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"en"</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;meta charset=<span class="string">"utf-8"</span>&gt;</span><br><span class="line">	&lt;title&gt;vue小白学习&lt;/title&gt;</span><br><span class="line">	&lt;script src=<span class="string">"./vue.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;div id=<span class="string">"root"</span>&gt;</span><br><span class="line">		&lt;h2&gt;&#123;&#123;msg&#125;&#125;&lt;/h2&gt;</span><br><span class="line">		&lt;h2 v-text=<span class="string">'msg1'</span>&gt;&lt;/h2&gt;</span><br><span class="line">		&lt;h2 v-html=<span class="string">'msg2'</span>&gt;&lt;/h2&gt;</span><br><span class="line">		&lt;h2 id=<span class="string">"root1"</span> v-html=<span class="string">'msg2'</span>&gt;&lt;/h2&gt;</span><br><span class="line"></span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">	&lt;script&gt;</span><br><span class="line">		new Vue(&#123;</span><br><span class="line">			el:<span class="string">'#root'</span>,</span><br><span class="line">			data:&#123;</span><br><span class="line">				msg:<span class="string">'&#123;&#123;&#125;&#125;代表插值表达式,使用它可以使页面中的某个元素使用Vue实例中data中的数据'</span>,</span><br><span class="line">				msg1:<span class="string">'v-text有同样的作用'</span>,</span><br><span class="line">				msg2:<span class="string">'也可以使用 v-html来代替'</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;);</span><br><span class="line">		var dom=document.getElementById(<span class="string">"root1"</span>)</span><br><span class="line">		dom.innerHTML=<span class="string">"不用像原生javascript直接操作dom了"</span></span><br><span class="line">	&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
           
         
@@ -369,7 +376,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/14/Vue数据绑定/" itemprop="url">学习Vue-2</a></h1>
+                <a class="post-title-link" href="/2018/09/14/Vue数据绑定/" itemprop="url">学习Vue</a></h1>
         
 
         <div class="post-meta">
