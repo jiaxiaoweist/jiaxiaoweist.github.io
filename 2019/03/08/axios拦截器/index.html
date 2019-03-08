@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="jiaxiaowei">
 <meta property="og:description" content="定义页面发送http请求，很多情况我们要对请求和其响应进行特定的处理；如果请求数非常多，单独对每一个请求进行处理会变得非常麻烦，程序的优雅性也会大打折扣。好在强大的axios为开发者提供了这样一个API：拦截器。拦截器分为 请求（request）拦截器和 响应（response）拦截器。 1.请求拦截器发送请求前统一处理，如：设置请求头headers、应用的版本号、终端类型等，用法如下： 1234">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-08T13:12:23.299Z">
+<meta property="og:updated_time" content="2019-03-08T13:15:25.330Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="axios拦截器">
 <meta name="twitter:description" content="定义页面发送http请求，很多情况我们要对请求和其响应进行特定的处理；如果请求数非常多，单独对每一个请求进行处理会变得非常麻烦，程序的优雅性也会大打折扣。好在强大的axios为开发者提供了这样一个API：拦截器。拦截器分为 请求（request）拦截器和 响应（response）拦截器。 1.请求拦截器发送请求前统一处理，如：设置请求头headers、应用的版本号、终端类型等，用法如下： 1234">
@@ -302,7 +302,7 @@
         <h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>页面发送http请求，很多情况我们要对请求和其响应进行特定的处理；如果请求数非常多，单独对每一个请求进行处理会变得非常麻烦，程序的优雅性也会大打折扣。好在强大的axios为开发者提供了这样一个API：拦截器。拦截器分为 请求（request）拦截器和 响应（response）拦截器。</p>
 <h2 id="1-请求拦截器"><a href="#1-请求拦截器" class="headerlink" title="1.请求拦截器"></a>1.请求拦截器</h2><p>发送请求前统一处理，如：设置请求头headers、应用的版本号、终端类型等，用法如下：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">axios.interceptors.request.use(</span><br><span class="line">    config =&gt; &#123;</span><br><span class="line">        <span class="comment">//do something like this</span></span><br><span class="line">        config.headers.common[<span class="string">'X-APP-SOURCE'</span>] = <span class="string">"h5"</span>;</span><br><span class="line">        config.headers.common[<span class="string">'X-APP-VERSION'</span>] = <span class="string">"1.4.5"</span>;</span><br><span class="line">        <span class="keyword">return</span> config</span><br><span class="line">    &#125;,</span><br><span class="line">    err =&gt; &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">Promise</span>.reject(err)</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
-<h2 id="1-响应拦截器"><a href="#1-响应拦截器" class="headerlink" title="1.响应拦截器"></a>1.响应拦截器</h2><p>有时候我们要根据响应的状态码来进行下一步操作，例如：由于当前的token过期，接口返回401未授权，那我们就要进行重新登录的操作，用法如下：</p>
+<h2 id="2-响应拦截器"><a href="#2-响应拦截器" class="headerlink" title="2.响应拦截器"></a>2.响应拦截器</h2><p>有时候我们要根据响应的状态码来进行下一步操作，例如：由于当前的token过期，接口返回401未授权，那我们就要进行重新登录的操作，用法如下：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">axios.interceptors.response.use(<span class="function"><span class="keyword">function</span>(<span class="params">res</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//do something like this</span></span><br><span class="line">    <span class="keyword">switch</span> (res.data.code) &#123;</span><br><span class="line">       <span class="keyword">case</span> <span class="number">401</span>:  router.push(&#123;<span class="attr">path</span>: <span class="string">'/login'</span>&#125;);</span><br><span class="line">       ......</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;,<span class="function"><span class="keyword">function</span>(<span class="params">err</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Promise</span>.reject(err);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
       
@@ -450,7 +450,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义"><span class="nav-number">1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-请求拦截器"><span class="nav-number">2.</span> <span class="nav-text">1.请求拦截器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-响应拦截器"><span class="nav-number">3.</span> <span class="nav-text">1.响应拦截器</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义"><span class="nav-number">1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-请求拦截器"><span class="nav-number">2.</span> <span class="nav-text">1.请求拦截器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-响应拦截器"><span class="nav-number">3.</span> <span class="nav-text">2.响应拦截器</span></a></li></ol></div>
             
 
           </div>
